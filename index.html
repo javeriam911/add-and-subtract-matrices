@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            width: 30px;
+        }
+
+        ;
+    </style>
+</head>
+
+<body>
+    <div class="matrix1 ">
+        <table>
+            <h3>matrix 1</h3>
+
+            <td>
+                <tr> <input type="number" max="9" id="m100"></tr>
+                <tr> <input type="number" max="9" id="m101"></tr>
+                <tr> <input type="number" max="9" id="m102"></tr>
+            </td>
+            <br>
+
+
+            <td>
+                <tr> <input type="number" max="9" id="m110"></tr>
+                <tr> <input type="number" max="9" id="m111"></tr>
+                <tr> <input type="number" max="9" id="m112"></tr>
+            </td>
+            <br>
+
+
+            <td>
+                <tr> <input type="number" max="9" id="m120"></tr>
+                <tr> <input type="number" max="9" id="m121"></tr>
+                <tr> <input type="number" max="9" id="m122"></tr>
+            </td>
+            <br>
+
+        </table>
+    </div>
+    <div class="matrix2 ">
+        <h3>matrix 2</h3>
+        <table>
+
+            <td>
+                <tr> <input type="number" id="m200"></tr>
+
+                <tr> <input type="number" id="m201"></tr>
+                <tr> <input type="number" id="m202"></tr>
+            </td>
+            <br>
+
+
+            <td>
+                <tr> <input type="number" id="m210"></tr>
+                <tr> <input type="number" id="m211"></tr>
+                <tr> <input type="number" id="m212"></tr>
+            </td>
+            <br>
+
+
+            <td>
+                <tr> <input type="number" id="m220"></tr>
+                <tr> <input type="number" id="m221"></tr>
+                <tr> <input type="number" id="m222"></tr>
+            </td>
+            <br>
+
+        </table>
+    </div>
+
+    <div class="result ">
+        <table>
+            <div>
+                <h3>result</h3>
+
+                <td>
+                    <tr> <input id="mR00" type="number" disabled max="9"></tr>
+                    <tr> <input id="mR01" type="number" disabled max="9"></tr>
+                    <tr> <input id="mR02" type="number" disabled max="9"></tr>
+                </td>
+            </div><br>
+            <div>
+                <td>
+                    <tr> <input id="mR10" type="number" disabled max="9"></tr>
+                    <tr> <input id="mR11" type="number" disabled max="9"></tr>
+                    <tr> <input id="mR12" type="number" disabled max="9"></tr>
+                </td>
+            </div><br>
+            <div>
+                <td>
+                    <tr> <input id="mR20" type="number" disabled max="9"></tr>
+                    <tr> <input id="mR21" type="number" disabled max="9"></tr>
+                    <tr> <input id="mR22" type="number" disabled max="9"></tr>
+                </td>
+            </div>
+        </table><br>
+
+        <button onclick="add()" type="submit">add </button>
+        <button onclick="sub()" type="submit">sub </button>
+
+    </div>
+    <script>
+
+
+
+function sub() {
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+
+
+
+                    document.querySelector(`#mR${i}${j}`).value =
+                        Number(document.querySelector(`#m1${i}${j}`).value) - Number(document.querySelector(`#m2${i}${j}`).value)
+
+                }
+            }
+
+        }
+
+        function add() {
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 3; j++) {
+
+
+
+                    document.querySelector(`#mR${i}${j}`).value =
+                        Number(document.querySelector(`#m1${i}${j}`).value) + Number(document.querySelector(`#m2${i}${j}`).value)
+
+                }
+            }
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form>div>input{
+            width:30px;
+        };
+        form>div>table{
+            border: 3px solid black;
+        }
+    </style>
+</head>
+
+<body> -->
+<!-- <h2>matrix sums</h2>
+    <form onsubmit="matrix() ; return false">
+        <div>
+            <table>
+                <h5>matrix `1</h5>
+            <input type="number" name="" id="m1i0">
+            <input type="number" name="" id="m1i1">
+            <input type="number" name="" id="m1i2">
+            <br><br>
+            <input type="number" name="" id="m1i3">
+            <input type="number" name="" id="m1i4">
+            <input type="number" name="" id="m1i5">
+            <br><br>
+
+            <input type="number" name="" id="m1i6">
+            <input type="number" name="" id="m1i7">
+            <input type="number" name="" id="m1i8">
+        </table>
+        </div>
+
+    </form>
+
+
+
+</body>
+
+</html> -->
